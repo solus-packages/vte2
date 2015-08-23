@@ -1,0 +1,27 @@
+name       : vte2
+version    : 0.28.22
+release    : 1
+source     :
+    - http://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz : 86cf0b81aa023fa93ed415653d51c96767f20b2d7334c893caba71e42654b0ae
+license    : GPL-2.0+
+summary    : Virtual Terminal Emulator Library - GTK2
+description: |
+    Virtual Terminal Emulator Library - GTK2
+builddeps  :
+    - pkgconfig(gtk+-2.0)
+    - pkgconfig(pygobject-2.0)
+    - pkgconfig(pygtk-2.0)
+rundeps    :
+    - python-gobject2
+    - python-gtk2
+setup      : |
+    %patch -p1 < $pkgfiles/security/cve-2012-2738.patch
+    %configure --disable-static \
+               --enable-introspection \
+               --libexecdir=/usr/lib/vte2 \
+               --enable-python \
+               --with-gtk=2.0
+build      : |
+    %make
+install    : |
+    %make_install
