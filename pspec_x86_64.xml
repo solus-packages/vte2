@@ -2,10 +2,11 @@
     <Source>
         <Name>vte2</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
-        <License>GPL-2.0+</License>
+        <License>GPL-2.0</License>
+        <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Virtual Terminal Emulator Library - GTK2</Summary>
         <Description xml:lang="en">Virtual Terminal Emulator Library - GTK2
 </Description>
@@ -18,15 +19,15 @@
 </Description>
         <PartOf>desktop.library</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/vte2</Path>
-            <Path fileType="library">/usr/lib/python2.7</Path>
-            <Path fileType="library">/usr/lib/girepository-1.0</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/gtk-2.0/vtemodule.so</Path>
+            <Path fileType="library">/usr/lib/vte2/gnome-pty-helper</Path>
+            <Path fileType="library">/usr/lib64/girepository-1.0/Vte-0.0.typelib</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Vte-0.0.gir</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/pygtk</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
-            <Path fileType="data">/usr/share/vte</Path>
+            <Path fileType="data">/usr/share/pygtk/2.0/defs/vte.defs</Path>
+            <Path fileType="data">/usr/share/vte/termcap-0.0/xterm</Path>
         </Files>
     </Package>
     <Package>
@@ -36,12 +37,12 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="current">vte2</Dependency>
+            <Dependency release="2">vte2</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/include/</Path>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
         </Files>
     </Package>
     <Package>
@@ -50,20 +51,17 @@
         <Description xml:lang="en">Virtual Terminal Emulator Library - GTK2
 </Description>
         <PartOf>programming.docs</PartOf>
-        <RuntimeDependencies>
-            <Dependency release="current">vte2</Dependency>
-        </RuntimeDependencies>
         <Files>
-            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2015-08-23</Date>
+        <Update release="2">
+            <Date>2017-03-10</Date>
             <Version>0.28.22</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>

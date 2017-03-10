@@ -1,9 +1,10 @@
 name       : vte2
 version    : 0.28.22
-release    : 1
+release    : 2
 source     :
     - http://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz : 86cf0b81aa023fa93ed415653d51c96767f20b2d7334c893caba71e42654b0ae
-license    : GPL-2.0+
+license    : GPL-2.0
+component  : desktop.library
 summary    : Virtual Terminal Emulator Library - GTK2
 description: |
     Virtual Terminal Emulator Library - GTK2
